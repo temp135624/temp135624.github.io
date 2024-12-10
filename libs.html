@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<body style="background-color: black;">
+    <link rel="stylesheet" type="text/css" href="libsStyles.css">
+    
+    <div id="bg" hidden></div>
+    <div id="main" style="margin:auto; text-align: center;">
+        <div id="teaReady" class="el">
+            <p>Вы готовы погрузиться в мир чая?</p>
+            <button id="yesButton">Да!</button>
+        </div>
+    </div>
+    <div id="stuff" class="el" hidden>
+        <p>Чай — напиток, получаемый варкой, завариванием и/или настаиванием листа чайного куста, который предварительно подготавливается специальным образом. Чай в широком смысле — любой напиток, приготовленный путём заваривания предварительно подготовленного растительного материала. В названиях таких напитков к слову «чай», как правило, добавляется пояснение, характеризующее используемое сырьё («травяной чай», «ягодный чай», «фруктовый чай» и так далее). Чаепитие как традиция появилось в Китае. Также выделяются суррогаты чая. Словом «чай» обозначают также сам лист чайного куста, обработанный и подготовленный для приготовления напитка. Подготовка включает предварительную сушку (вяление), скручивание, более или менее длительное ферментативное окисление, окончательную сушку. Прочие операции вводятся в процесс только для производства отдельных видов и сортов чая. Иногда слово «чай» используют и в качестве названия чайного куста — вида растений рода Камелия семейства Чайные; в ботанической научной литературе для этого вида обычно используется название камелия китайская (Camellia sinensis).</p>
+    </div>
+    <div id="app" class="el" hidden>
+        <button @click="teaClick">{{ btnText }}</button>
+        <div v-if="showVueThing">
+            <p style="font-size:12pt">Какой чай ты любишь?</p>
+            <input type="text" v-model="favTea">
+            <button @click="inpClick">Я люблю {{ favTea }}</button>
+        </div>
+        <div v-if="showShop">
+            <a href="shopv2.html" v-bind:style="{ fontSize: size + 'px'}">Купи {{ favTea }} в нашем магазине</a>
+        </div>
+    </div>
+    <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="libscript.js"></script>
+    <link href="toastr.css" rel="stylesheet"/>
+    <script src="toastr.js"></script>
+    </head>
+</body>

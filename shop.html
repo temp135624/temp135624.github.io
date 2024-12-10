@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<body>
+    <div class="bg"></div>
+    <div class="main">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <title>Red Leaf Tea - Ассортимент</title>
+        <div style="text-align: center;">
+            <form align="right">
+                <select name="lang">
+                    <option value="ru">Русский</option>
+                    <option value="en">English</option>
+                </select>
+            </form>
+            <header class="headerc">
+                <h1>Red Leaf Tea</h1>  <!--лого сайта-->
+                <a name="Погрузиться в мир чая" href="libs.html" title="Погрузиться в мир чая">Погрузиться в мир чая</a>
+            </header>
+            <h2 class="p3">Ассортимент чая</h2>
+            <h3 class="p3"> Виды чая</h3>
+        </div>
+        <section>
+            <DL class="p2"> <!--лист определений-->
+                <DT><strong>Черный</strong><DD> В сухом виде имеет тёмно-коричневый или почти чёрный цвет. Настой — от оранжевого до тёмно-красного. В аромате могут выделяться цветочные или медовые нотки, вкус характерный, терпкий, не горчит.
+                <DT><strong>Зеленый</strong><DD> В сухом виде имеет зелёный цвет (от салатового до тёмно-зелёного, в зависимости от особенностей изготовления), настой — неяркого желтоватого или зеленоватого цвета, в аромате отчётливо выделяется «травяная» нотка (может быть похож на запах сухого сена), вкус терпкий, может быть чуть сладковатым (но не горьким — горчат только низкокачественные или неправильно заваренные, в частности, перестоявшие зелёные чаи).
+                <DT><strong>Белый</strong><DD> Настой жёлто-зеленоватый, более тёмный, чем настой зелёных чаёв (из-за более высокой степени окисления). Настой имеет цветочный аромат, сладковатый вкус и оставляет приятное, сладковатое послевкусие. Белый чай очень чувствителен к режиму заваривания.
+                <DT><strong>Улун</strong><DD> Внешний вид и характеристики улунов сильно зависят от технологии и конкретной степени окисления, но все улуны имеют очень характерный вкус, который не позволяет спутать их с другими видами чаёв.
+                <DT><strong>Пуэр</strong><DD>  В отличие от других типов чаёв, пуэр не только окисляется, но и ферментируется в точном смысле этого слова. Степень окисления шу пуэров постоянна, она определяется сортом и технологией и обычно довольно высока (не ниже, чем у улунов). Окисление шэн пуэров меняется с возрастом, и если «молодой» пуэр окислен всего на несколько процентов, то «старый» может быть окислен на несколько десятков процентов. Один и тот же чай по мере старения даёт настой существенно разного вида, аромата и вкуса.
+            </DL>
+            <h3 class="p3">Внимание</h3>
+            <ol id="list"> <!--упорядоченный лист // ul = unordered ol = ordered dl = definition li = item-->
+                <li>Доставка чая в отдаленные районы может занимать более недели</li>
+                <li>Пищевые продукты возврату не подлежат</li>
+            </ol>
+        </section>
+        <TABLE width="50%" bordercolor="black" border="1" align="center">  <!--таблица-->
+            <th colspan="3">Ассортимент</th>
+            <tr><TD><strong>Название</strong></TD><TD><strong>Регион</strong></TD><TD><strong>Цена</strong></TD></TR> 
+            <tr><TD>Ассам</TD><TD>Индия</TD><TD>1500 тг</TD></TR>
+            <tr><TD>Дарджилинг</TD><TD>Индия</TD><TD>2500 тг</TD></TR> 
+            <tr><TD>Хун Ча</TD><TD>Китай</TD><TD>2000 тг</TD></TR> 
+            <tr><TD>Байхао Иньчжэнь</TD><TD>Китай</TD><TD>3000 тг</TD></TR> 
+            <tr><TD>Да Цзинь Чжэнь</TD><TD>Китай</TD><TD>1600 тг</TD></TR>
+            <tr><TD>Лунцзин</TD><TD>Китай</TD><TD>2000 тг</TD></TR>  
+            <tr><TD>Гунтин</TD><TD>Китай</TD><TD>2700 тг</TD></TR>
+        </TABLE>
+       <script src="script.js"></script>
+       
+
+       <h2 class="p3">Купить</h2>
+        <div id="shop">
+            <form name="shopform">
+                <select id="tealist">
+                    <option value=0>Ассам</option>
+                    <option value=1>Дарджилинг</option>
+                    <option value=2>Хун Ча</option>
+                    <option value=3>Байхао Иньчжэнь</option>
+                    <option value=4>Да Цзинь Чжэнь</option>
+                    <option value=5>Лунцзин</option>
+                    <option value=6>Гунтин</option>
+                </select>
+                <input type="button" onclick="addc()" value="Добавить в корзину">
+                <p>Скидка студентам<input type="checkbox" id="disccheck"></p>
+                <p>Корзина</p>
+                <p id="cartlist">-</p>
+                <p>Сумма</p>
+                <p id="shoptot">-</p>
+                <input type="button" onclick="payopen()" value="К оплате">
+            </form>
+        </div>
+        <div id="payform">
+            <h2>Оплата</h2>
+            <p>Номер вашей карты</p>
+            <input type="text" id="card">
+            <p>Срок действия</p>
+            <input type="date">
+            <p>Имя владельца</p>
+            <input type="text" id="clientname">
+            <p>CVV</p>
+            <input type="password" id="cvv">
+            <p>Я согласен с правилами оплаты<input type="checkbox" id="agree"></p>
+            <input type="button" onclick="pay()" value="Оплатить">
+        </div>
+        <div class="formm">
+            <form align="center">
+                <p><strong>Ваш E-Mail для обратной связи</strong></p>
+                <input type="email" required="required">
+                <p><i>Подписаться на рассылку</i> <input type="checkbox"></p>
+                <input type="submit">
+            </form>
+            <h2 style="text-align: center;">Телефон для заказа: +77779846219</h2>
+            <h2 class="link" style="text-align: center;"><a name="Главная Страница" href="main.html" title="Главная Страница">Главная Страница</a></h2>
+        </div>
+        <footer class="footerc">
+        <p style="text-align: center;">Интернет магазин Red Leaf Tea был открыт в 2024 году. Усть-Каменогорск. Все права защищены.</p>
+        </footer>
+    </div>
+</body>

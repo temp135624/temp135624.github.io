@@ -1,0 +1,12 @@
+.el {
+    border-style:ridge;
+    border-color:darkred;
+    width:fit-content;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    background-color: rgba(144, 238, 144, 0.5);
+    font-size:20pt;
+    padding: 10px;
+    border-radius: 15px;
+}
